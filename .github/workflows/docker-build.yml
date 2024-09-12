@@ -31,8 +31,8 @@ jobs:
       with:
         push: true
         tags: |
-          your-dockerhub-username/your-image-name:latest
-          your-dockerhub-username/your-image-name:{{ github.sha }}
+          djniche/streamonitor:latest
+          djniche/streamonitor:{{ github.sha }}
         platforms: linux/amd64,linux/arm64
 
     - name: Image digest
