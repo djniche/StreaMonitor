@@ -36,4 +36,4 @@ jobs:
         platforms: linux/amd64,linux/arm64
 
     - name: Image digest
-      run: echo "Digest: ${{ steps.docker_build.outputs.digest }}"
+      run: echo "Digest: ${{ steps.build-and-push.outputs.digest }}"
