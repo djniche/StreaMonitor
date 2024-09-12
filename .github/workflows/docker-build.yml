@@ -27,6 +27,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build and push Docker images
+      id: build_and_push  # 添加步骤ID
       uses: docker/build-push-action@v5
       with:
         push: true
@@ -36,4 +37,4 @@ jobs:
         platforms: linux/amd64,linux/arm64
 
     - name: Image digest
-      run: echo "Digest: ${{ steps.build-and-push.outputs.digest }}"
+      run: echo "Digest: ${{ steps.build_and_push.outputs.digest }}"
