@@ -10,8 +10,8 @@ from parameters import DEBUG, SEGMENT_TIME, CONTAINER
 def getVideoFfmpeg(self, url, filename):
     cmd = [
         'ffmpeg',
+        '-re',  # 添加 -re 选项
         '-user_agent', self.headers['User-Agent']
-    ]
 
     if type(self.cookies) is requests.cookies.RequestsCookieJar:
         cookies_text = ''
