@@ -12,6 +12,7 @@ def getVideoFfmpeg(self, url, filename):
         'ffmpeg',
         '-re',  # 添加 -re 选项
         '-user_agent', self.headers['User-Agent']
+    ]
 
     if type(self.cookies) is requests.cookies.RequestsCookieJar:
         cookies_text = ''
