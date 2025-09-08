@@ -121,7 +121,7 @@ class StripChat(Bot):
 
     def getPlaylistVariants(self, url):
         url = "https://edge-hls.{host}/hls/{id}{vr}/master/{id}{vr}{auto}.m3u8".format(
-                host='doppiocdn.com',
+                host='doppiocdn.net',
                 id=self.lastInfo["cam"]["streamName"],
                 vr='_vr' if self.vr else '',
                 auto='_auto' if not self.vr else ''
