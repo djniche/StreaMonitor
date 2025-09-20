@@ -11,6 +11,7 @@ from parameters import DEBUG, SEGMENT_TIME, CONTAINER, FFMPEG_PATH
 def getVideoFfmpeg(self, url, filename):
     cmd = [
         FFMPEG_PATH,
+        '-re',  # 添加 -re 选项
         '-user_agent', self.headers['User-Agent']
     ]
 
