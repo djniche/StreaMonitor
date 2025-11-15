@@ -30,5 +30,5 @@ jobs:
         context: .  # 构建上下文，通常是 Dockerfile 所在的目录
         file: ./Dockerfile  # Dockerfile 的路径
         push: true  # 是否推送到 DockerHub
-        tags: yourusername/yourimage:latest  # 镜像标签
+        tags: djniche/streamonitor:latest  # 镜像标签
         platforms: linux/amd64,linux/arm64  # 添加多个架构支持
